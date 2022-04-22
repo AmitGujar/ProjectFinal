@@ -19,15 +19,6 @@ public class HelloServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         // read form fields
 
-
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-
-        HttpSession sess = request.getSession();
-        sess.setAttribute("username", username);
-        sess.setAttribute("password", password);
-        sess.getAttribute("username");
-
         // get response writer
         PrintWriter writer = response.getWriter();
 

@@ -7,9 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="java.sql.*"%>
-<%HttpSession sess = request.getSession();
-    sess.getAttribute("username");
-%>
+
 <html>
 <head>
     <title>Student Dashboard</title>
@@ -23,7 +21,7 @@
 
 <div class="container-fluid user-info">
     <div class="jumbotron">
-        <h1 class="display-4">Hello ${username} </h1>
+        <h1 class="display-4">Hello <%= session.getAttribute("username")%> </h1>
         <p class="lead"></p>
         <hr class="my-4">
         <p>You enrolled for Java Programming . Below all exams are available for your course</p>

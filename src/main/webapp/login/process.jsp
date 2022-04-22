@@ -5,6 +5,7 @@
 <%
     String username = request.getParameter("username");
     String password = request.getParameter("password");
+
     try
     {
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -13,9 +14,10 @@
         ps.setString(1,username);
         ps.setString(2,password);
         ps.executeUpdate();
+        session.setAttribute("username", username);
         response.sendRedirect("../student/index.jsp");
 
-    }
+}
     catch(Exception e)
     {
         e.printStackTrace();
