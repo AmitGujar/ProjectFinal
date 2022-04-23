@@ -21,7 +21,9 @@
             response.sendRedirect("../student/index.jsp");
         }
         else {
-            response.sendRedirect("AuthFailed.jsp");
+            request.setAttribute("errorMessage", "Invalid user or password");
+            request.getRequestDispatcher("AuthFailed.jsp").forward(request, response);
+
         }
 
 }
