@@ -5,17 +5,24 @@
 <%
     String username = request.getParameter("username");
     String password = request.getParameter("password");
+    session.setAttribute("username", username);
 
     try
     {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/school","root","1234");
-        PreparedStatement ps=con.prepareStatement("insert into student(sno, sname, password) values(NULL,?,?)");
+//        PreparedStatement ps=con.prepareStatement("insert into student(sno, sname, password) values(NULL,?,?)");
+        PreparedStatement ps=con.prepareStatement("select * from student where sname=? and password=?");
         ps.setString(1,username);
         ps.setString(2,password);
-        ps.executeUpdate();
-        session.setAttribute("username", username);
-        response.sendRedirect("../student/index.jsp");
+//        ps.executeUpdate();
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            response.sendRedirect("../student/index.jsp");
+        }
+        else {
+            response.sendRedirect("AuthFailed.jsp");
+        }
 
 }
     catch(Exception e)

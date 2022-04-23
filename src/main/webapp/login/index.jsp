@@ -34,11 +34,8 @@
                         <!--Grid column-->
                         <div class="col-md-7">
                             <div class="md-form mb-0">
-                                <!-- Birth Date -->
-                                <label for="datepicker">Password :</label>
-                                <div class='input-group date' id='datepicker'>
-                                    <input type='password' name="password" class="form-control" required />
-                                </div>
+                                <label for="password">Password :</label>
+                                <input type='password' id="password" name='password' class="form-control" required />
                             </div>
                         </div>
                     </div><br>

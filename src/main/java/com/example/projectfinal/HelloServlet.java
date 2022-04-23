@@ -6,18 +6,23 @@ import java.io.PrintWriter;
 //import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-//@WebServlet(name = "/login/process.jsp", urlPatterns = {"/login/process.jsp"})
+//@WebServlet(name = "/login")
 public class HelloServlet extends HttpServlet {
 
 
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         // read form fields
+
+
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
 
         // get response writer
         PrintWriter writer = response.getWriter();

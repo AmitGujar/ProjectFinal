@@ -15,8 +15,6 @@ public class driverConnection {
             Statement statement = connection.createStatement();
 
             ResultSet resultSet = statement.executeQuery("select * from student");
-
-//            statement.executeUpdate("insert into student" + "(sno, sname, password)" + "values('4', 'testjava', 'passwordtest')");
             System.out.println("Data Added Successfully");
             while (resultSet.next()) {
                 System.out.print(resultSet.getInt("sno") + "    ");

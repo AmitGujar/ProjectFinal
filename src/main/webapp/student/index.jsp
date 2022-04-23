@@ -15,13 +15,35 @@
     <%@ include file="/partials/meta.html" %>
 </head>
 <body>
-<%@ include file="/partials/header.html" %>
+<%--<%@ include file="/partials/header.html" %>--%>
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+    <a class="navbar-brand" href="#">College Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+            <a class="nav-link" href="${pageContext.request.contextPath}/login/index.jsp">Logout</a>
+          </span>
+    </div>
+</nav>
 <!-- navbar ends -->
 <br>
 
 <div class="container-fluid user-info">
     <div class="jumbotron">
-        <h1 class="display-4">Hello <%= session.getAttribute("username")%> </h1>
+        <h1 class="display-4">Hello, <%= session.getAttribute("username")%> </h1>
         <p class="lead"></p>
         <hr class="my-4">
         <p>You enrolled for Java Programming . Below all exams are available for your course</p>
