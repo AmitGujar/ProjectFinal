@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Student Login</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/login/styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <%@ include file="/partials/meta.html" %>
 </head>
 <body>
@@ -16,7 +16,7 @@
 
         <div class="row">
             <div class="col-md-5 text-center">
-                <img src="${pageContext.request.contextPath}/login/login.png"
+                <img src="../log_in.png"
                      alt="Image failed to load" height="92%" width="100%">
             </div>
             <!--Grid column-->
@@ -45,7 +45,7 @@
                     </div>
                     <br>
                     <div class="user-actions">
-                        <a href="">Admin Login</a><br>
+                        <a href="../admin/index.jsp">Admin Login</a><br>
                         <a href="">Teacher Login</a><br>
                         <a href="/contact">Forgot Password ?</a>
                     </div>
@@ -53,11 +53,6 @@
             </div>
         </div>
     </section>
-</div>
-
-<!-- about us -->
-<div class="container">
-
 </div>
 
 <!-- footer -->

@@ -11,7 +11,7 @@
 <html>
 <head>
     <title>Student Dashboard</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/student/styles.css"/>
+    <link rel="stylesheet" href="style.css"/>
     <%@ include file="/partials/meta.html" %>
 </head>
 <body>
@@ -26,10 +26,10 @@
             <li class="nav-item active">
                 <a class="nav-link" href="../home/index.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="#">About</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="#">Contact</a>
             </li>
         </ul>

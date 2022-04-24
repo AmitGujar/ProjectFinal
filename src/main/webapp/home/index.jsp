@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Home Page</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/home/styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <%@ include file="/partials/meta.html" %>
 </head>
 <body>
@@ -58,7 +58,7 @@
             <h2 id="aboutsection2">Our Core Values</h2>
             <div class="row">
                 <div class="col-md-5 text-center">
-                    <img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/features_overview_jg7a.svg"
+                    <img src="images/features.png"
                          alt="load error" height="92%" width="100%">
                 </div>
                 <!--Grid column-->
@@ -100,14 +100,14 @@
                 </ul>
             </div>
             <div class="col-md-5 text-center">
-                <img src="" alt="load error" height="92%" width="100%">
+                <img src="images/strength.png" alt="load error" height="92%" width="100%">
             </div>
         </div>
     </section>
     <hr>
     <p class="values-section">
-        <i>If you have decided to develop your skills in Computer field, SPaRK is the best
-            Computer training institute for you and your perfect choice. Choose to learn at SPaRK and relax. You
+        <i>If you have decided to develop your skills in Computer field, DCPIMR is the best
+            Computer training institute for you and your perfect choice. Choose to learn at DCPIMR and relax. You
             are
             in good
             hands!
@@ -122,7 +122,7 @@
         <!--Section heading-->
         <div class="row">
             <div class="col-md-5 text-center">
-                <img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/code_thinking_1jeh.svg"
+                <img src="images/code_thinking.png"
                      alt="load error" height="92%" width="100%">
             </div>
             <!--Grid column-->

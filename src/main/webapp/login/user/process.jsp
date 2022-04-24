@@ -18,11 +18,11 @@
 //        ps.executeUpdate();
         ResultSet rs = ps.executeQuery();
         if (rs.next()) {
-            response.sendRedirect("../student/index.jsp");
+            response.sendRedirect("../../student/index.jsp");
         }
         else {
             request.setAttribute("errorMessage", "Invalid user or password");
-            request.getRequestDispatcher("AuthFailed.jsp").forward(request, response);
+            request.getRequestDispatcher("../AuthFailed.jsp").forward(request, response);
 
         }
 
