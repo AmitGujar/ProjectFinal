@@ -1,9 +1,87 @@
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.main-container {
+    background-color: rgb(242, 245, 248);
+
+}
+
 #navbar {
     background-color: #ff0000;
 }
 
+
+.type_8 {
+    border: 1px dashed #000;
+    width: 100%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+b {
+    color: white;
+}
+
+.card {
+    margin-top: -470px;
+    padding-top: 10px;
+    margin-left: 14px;
+    width: 345px;
+    height: 320px;
+
+    color: #ddd3dd;
+    font-size: 20px;
+    background-color: #2E2E2E;
+}
+
+.card-body {
+    background-color: #2E2E2E;
+}
+
+h1 {
+    padding-top: 17px;
+    font-weight: 700;
+    margin-left: 14px;
+    text-align: right;
+}
+
+.subhead {
+    font-size: 20px;
+    width: 450px;
+    margin-left: 20px;
+    padding-top: 1%;
+}
+
+.name {
+    width: 100%;
+    margin-right: auto;
+    text-align: right;
+    font-size: 15px;
+    margin-right: 14px;
+    padding-top: -5%;
+    line-height: 0.1;
+}
+
+i {
+    font-size: large;
+}
+
+#about {
+    text-align: left;
+    font-size: 40px;
+
+}
+
 .about-section {
-    font-size: larger;
+    font-size: 18px;
+}
+
+.values-section {
+    font-size: 21px;
 }
 
 .footer {
