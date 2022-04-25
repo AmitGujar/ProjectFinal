@@ -34,7 +34,7 @@
             </li>
         </ul>
         <span class="navbar-text">
-            <a class="nav-link" href="${pageContext.request.contextPath}/login/index.jsp">Logout</a>
+            <a class="nav-link" href="${pageContext.request.contextPath}/login/user/index.jsp">Logout</a>
           </span>
     </div>
 </nav>

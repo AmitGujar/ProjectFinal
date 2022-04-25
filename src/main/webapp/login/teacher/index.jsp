@@ -1,18 +1,24 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: amitd
+  Date: 25-04-2022
+  Time: 03:59
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Student Login</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Teacher Login</title>
     <%@ include file="/partials/meta.html" %>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <%@ include file="/partials/header.html" %>
-<!-- navbar ends -->
 
 <div class="container">
     <section class="mb-4">
         <!--Section heading-->
-        <h2 class="h1-responsive font-weight-bold text-center my-4">Student Sign in</h2>
+        <h2 class="h1-responsive font-weight-bold text-center my-4">Teacher Login</h2>
 
         <div class="row">
             <div class="col-md-5 text-center">
@@ -45,8 +51,6 @@
                     </div>
                     <br>
                     <div class="user-actions">
-                        <a href="../admin/index.jsp">Admin Login</a><br>
-                        <a href="../teacher/index.jsp">Teacher Login</a><br>
                         <a href="/contact">Forgot Password ?</a>
                     </div>
                 </form>
@@ -54,8 +58,6 @@
         </div>
     </section>
 </div>
-
-<!-- footer -->
 <%@ include file="/partials/footer.html" %>
 </body>
 </html>

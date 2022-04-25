@@ -29,8 +29,8 @@ public class HelloServlet extends HttpServlet {
 
         // return response
 //        writer.println("index.jsp");
-        RequestDispatcher rd=request.getRequestDispatcher("student/index.jsp");
-        rd.forward(request,response);
+//        RequestDispatcher rd=request.getRequestDispatcher("student/index.jsp");
+//        rd.forward(request,response);
     }
 
 }
