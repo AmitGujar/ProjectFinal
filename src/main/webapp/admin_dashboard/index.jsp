@@ -40,12 +40,39 @@ ResultSet resultSet = null;
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<%@ include file="/partials/header.html" %>
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+    <a class="navbar-brand" href="#">College Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../home/index.jsp">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+            <a class="nav-link" href="${pageContext.request.contextPath}/login/admin/index.jsp">Logout</a>
+          </span>
+    </div>
+</nav>
+
+
+
+
+
+
 <div class="row">
     <div class="col-lg-2">
         <div class="sidebar">
             <a class="active" href="#">Dashboard</a>
-            <a href="/admission/new">New admissions</a>
+            <a href="../registration/index.jsp">New admissions</a>
             <a href="/admission/all">Manage admissions</a>
             <a href="/enquiry">Manage enquiries</a>
         </div>
@@ -84,7 +111,6 @@ ResultSet resultSet = null;
                 </div>
             </div>
         </div>
-        <br>
     </div>
 </div>
 <table class="table table-bordered">
@@ -94,10 +120,11 @@ ResultSet resultSet = null;
         <th scope="col">Name</th>
         <th scope="col">Course</th>
         <th scope="col">Email</th>
+        <th scope="col">Gender</th>
         <th scope="col">Address</th>
         <th scope="col">Contact</th>
         <th scope="col">Total Fees</th>
-        <th scope="col">Pending</th>
+        <th scope="col">Paid Fees</th>
     </tr>
     </thead>
 <%
@@ -109,7 +136,6 @@ ResultSet resultSet = null;
 
         while(resultSet.next()) {
 %>
-
 <%--code for table starts here--%>
         <tbody>
         <tr>
@@ -117,12 +143,13 @@ ResultSet resultSet = null;
             <td><%=resultSet.getString("sname")%></td>
             <td><%=resultSet.getString("course")%></td>
             <td><%=resultSet.getString("email")%></td>
+            <td><%=resultSet.getString("gender")%></td>
             <td><%=resultSet.getString("address")%></td>
             <td><%=resultSet.getString("contact")%></td>
             <td><%=resultSet.getString("total_fees")%></td>
-            <td><%=resultSet.getString("pending_fees")%></td>
+            <td><%=resultSet.getString("paid_fees")%></td>
         </tr>
-        
+
 <%--code for table ends here--%>
 
 <%

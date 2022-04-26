@@ -17,6 +17,10 @@
     padding-left: 27%;
 }
 
+.submitBtn {
+    text-align: center;
+}
+
 .btnn {
     display: inline-block;
     width: 55px;
@@ -77,66 +81,4 @@
 
 .row {
     margin-right: 0px;
-}
-
-
-.sidebar {
-    margin: 0;
-    padding: 0;
-    width: 170px;
-    background-color: #f1f1f1;
-    position: relative;
-    height: 90%;
-    overflow: auto;
-}
-
-/* Sidebar links */
-.sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-}
-
-/* Active/current link */
-.sidebar a.active {
-    background-color: #28a745;
-    color: white;
-}
-
-/* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-}
-
-div.content {
-    margin-left: 170px;
-    padding: 1px 16px;
-    height: 1000px;
-}
-
-/* mobile screen */
-@media screen and (max-width: 700px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    .sidebar a {
-        float: left;
-    }
-
-    div.content {
-        margin-left: 0;
-    }
-}
-
-/* vertical sidebar for screens 400px */
-@media screen and (max-width: 400px) {
-    .sidebar a {
-        text-align: center;
-        float: none;
-    }
 }

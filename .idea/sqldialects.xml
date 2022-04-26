@@ -7,5 +7,6 @@
     <file url="file://$PROJECT_DIR$/src/main/webapp/login/admin/process.jsp" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/login/teacher/process.jsp" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/login/user/process.jsp" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/registration/process.jsp" dialect="GenericSQL" />
   </component>
 </project>
