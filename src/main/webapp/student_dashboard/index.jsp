@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: amitd
-  Date: 19-04-2022
-  Time: 11:47
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="java.sql.*"%>
 
@@ -52,7 +45,22 @@
         </p>
     </div>
 </div>
+<div class="row">
+    <div id="card" class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card-deck">
+            <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="width: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">Name: <%= session.getAttribute("courseName")%></h5>
+                    <p class="card-text">Description: <%= session.getAttribute("courseDescription")%></p>
+                    <p class="card-text">Topic: All included </p>
+                    <hr>
+                    <a href="" class="btn btn-success">Attempt</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+</div>
 <%--footer starts--%>
 <%@ include file="/partials/footer.html" %>
 </body>

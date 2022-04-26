@@ -15,7 +15,6 @@
         PreparedStatement ps=con.prepareStatement("select * from student where sname=? and password=?");
         ps.setString(1,username);
         ps.setString(2,password);
-//        ps.executeUpdate();
         ResultSet rs = ps.executeQuery();
         if (rs.next()) {
             response.sendRedirect("../../student_dashboard/index.jsp");

@@ -40,34 +40,7 @@ ResultSet resultSet = null;
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
-    <a class="navbar-brand" href="#">College Logo</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="../home/index.jsp">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Contact</a>
-            </li>
-        </ul>
-        <span class="navbar-text">
-            <a class="nav-link" href="${pageContext.request.contextPath}/login/admin/index.jsp">Logout</a>
-          </span>
-    </div>
-</nav>
-
-
-
-
-
-
+<%@ include file="/partials/header_logout.html" %>
 <div class="row">
     <div class="col-lg-2">
         <div class="sidebar">
