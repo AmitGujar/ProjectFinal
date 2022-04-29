@@ -53,9 +53,9 @@
                         <div class="col-lg-12">
                             <div class="row">
                                 <div class="col-sm-12 col-md col-lg">
-                                    <form action="process.jsp" method="get">
-                                        <input type="text" name="sno" class="form-control"
-                                               placeholder="Enter student ID" required><br>
+                                    <form action="process.jsp" method="post">
+                                        <input type="email" name="email" class="form-control"
+                                               placeholder="Enter student email" required><br>
                                         <button type="submit" class="btn btn-danger">Delete</button>
 
                                     </form>
