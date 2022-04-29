@@ -20,7 +20,9 @@
     {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/school","root","1234");
-        PreparedStatement ps=con.prepareStatement("insert into student_info(sno, sname, email, course, gender, contact, address, total_fees, paid_fees, payment_mode, payment_ID, remark) values(NULL,?,?,?,?,?,?,?,?,?,?,?)");
+        PreparedStatement ps=con.prepareStatement("insert into student_info(sno, sname, email, " +
+                "course, gender, contact, address, total_fees, " +
+                "paid_fees, payment_mode, payment_ID, remark) values(NULL,?,?,?,?,?,?,?,?,?,?,?)");
 
         ps.setString(1,username);
         ps.setString(2,email);

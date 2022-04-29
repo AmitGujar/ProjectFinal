@@ -19,7 +19,6 @@
     String userId = "root";
     String password = "1234";
 
-
 try {
     Class.forName(driverName);
 } catch (ClassNotFoundException e) {
@@ -46,7 +45,7 @@ ResultSet resultSet = null;
         <div class="sidebar">
             <a class="active" href="#">Dashboard</a>
             <a href="../registration/index.jsp">New admissions</a>
-            <a href="/admission/all">Manage admissions</a>
+            <a href="../deladmission/index.jsp">Manage admissions</a>
             <a href="/enquiry">Manage enquiries</a>
         </div>
     </div>
@@ -124,7 +123,6 @@ ResultSet resultSet = null;
         </tr>
 
 <%--code for table ends here--%>
-
 <%
     }
     } catch (Exception e){
