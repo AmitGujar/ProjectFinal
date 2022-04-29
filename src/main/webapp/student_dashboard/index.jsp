@@ -1,5 +1,33 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="java.sql.*"%>
+<%@ page import="java.sql.DriverManager" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="java.sql.Connection" %>
+
+<%
+    String driverName = "com.mysql.cj.jdbc.Driver";
+    String connectionUrl = "jdbc:mysql://localhost:3306/";
+    String dbName = "school";
+    String userId = "root";
+    String password = "1234";
+
+
+    try {
+        Class.forName(driverName);
+    } catch (ClassNotFoundException e) {
+        e.printStackTrace();
+    }
+
+    Connection connection= null;
+    Statement statement= null;
+    ResultSet resultSet = null;
+%>
+
+
+
+
+
 
 <html>
 <head>
@@ -8,35 +36,13 @@
     <%@ include file="/partials/meta.html" %>
 </head>
 <body>
-<%--<%@ include file="/partials/header.html" %>--%>
-<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
-    <a class="navbar-brand" href="#">College Logo</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="../home/index.jsp">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Contact</a>
-            </li>
-        </ul>
-        <span class="navbar-text">
-            <a class="nav-link" href="${pageContext.request.contextPath}/login/user/index.jsp">Logout</a>
-          </span>
-    </div>
-</nav>
+<%@ include file="/partials/header_logout.html" %>
 <!-- navbar ends -->
 <br>
 
 <div class="container-fluid user-info">
     <div class="jumbotron">
-        <h1 class="display-4">Hello, <%= session.getAttribute("username")%> </h1>
+        <h1 class="display-4">Hello, <%=session.getAttribute("username")%> </h1>
         <p class="lead"></p>
         <hr class="my-4">
         <p>You enrolled for Java Programming . Below all exams are available for your course</p>
@@ -45,22 +51,35 @@
         </p>
     </div>
 </div>
-<div class="row">
-    <div id="card" class="col-sm-12 col-md-6 col-lg-4">
-        <div class="card-deck">
-            <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="width: auto;">
-                <div class="card-body">
-                    <h5 class="card-title">Name: <%= session.getAttribute("courseName")%></h5>
-                    <p class="card-text">Description: <%= session.getAttribute("courseDescription")%></p>
-                    <p class="card-text">Topic: All included </p>
-                    <hr>
-                    <a href="" class="btn btn-success">Attempt</a>
+<%
+    try{
+        connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+        statement=connection.createStatement();
+        String sql = "SELECT * FROM courses";
+        resultSet = statement.executeQuery(sql);
+
+        while(resultSet.next()) {
+%>
+    <div class="row">
+        <div id="card" class="col-sm-12 col-md-6 col-lg-12">
+            <div class="card-deck">
+                <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="width: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=resultSet.getString("cname")%></h5>
+                        <p class="card-text">Description: <%=resultSet.getString("cdescription")%></p>
+                        <p class="card-text">Topic: All included </p>
+                        <hr>
+                        <a href="" class="btn btn-success">Attempt</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-</div>
+<%  }
+} catch (Exception e){
+    e.printStackTrace();
+}
+%>
 <%--footer starts--%>
 <%@ include file="/partials/footer.html" %>
 </body>
