@@ -62,40 +62,41 @@
                         <!--Grid row-->
 
                         <div class="row">
-                            <div class="col-md-6"><%
-                                try{
-                                    connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
-                                    statement=connection.createStatement();
-                                    String sql = "SELECT * FROM courses";
-                                    resultSet = statement.executeQuery(sql);
-
-                                    while(resultSet.next()) {
-                                %>
+                            <div class="col-md-6">
                                 <label for="courseName">Course Name :</label>
                                 <select name="courseName" id="courseName" class="form-control">
                                     <option value="">
-                                        select course
+                                        Select Course
                                     </option>
+                                    <%
+                                        try{
+                                            connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+                                            statement=connection.createStatement();
+                                            String sql = "SELECT * FROM courses";
+                                            resultSet = statement.executeQuery(sql);
+
+                                            while(resultSet.next()) {
+                                    %>
                                     <option value="<%=resultSet.getString("cname")%>">
                                         <%=resultSet.getString("cname")%>
                                     </option>
+                                    <%
+                                        }
+                                    } catch (Exception e){
+                                        e.printStackTrace();
+                                    }
+
+                                    %>
                                 </select>
                             </div>
                         </div>
-                        <%
-                                }
-                            } catch (Exception e){
-                                e.printStackTrace();
-                            }
 
-                        %>
                         <!--Grid row-->
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="md-form mb-0">
                                     <label for="enquiry">Ask your doubt :</label>
-                                    <textarea id="enquiry" name="enquiry" class="form-control" rows="2" cols="120"  required>
-                                    </textarea>
+                                    <textarea id="enquiry" name="enquiry" class="form-control" rows="2" cols="120"  required></textarea>
                                     <br>
                                 </div>
                             </div>
