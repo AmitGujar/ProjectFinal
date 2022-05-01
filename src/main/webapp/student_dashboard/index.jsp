@@ -69,7 +69,7 @@
                         <p class="card-text">Description: <%=resultSet.getString("cdescription")%></p>
                         <p class="card-text">Topic: All included </p>
                         <hr>
-                        <a href="" class="btn btn-success">Attempt</a>
+                        <a href="../questions/index.jsp" class="btn btn-success">Attempt</a>
                     </div>
                 </div>
             </div>

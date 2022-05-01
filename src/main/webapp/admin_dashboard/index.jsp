@@ -29,9 +29,6 @@ Connection connection= null;
 Statement statement= null;
 ResultSet resultSet = null;
 %>
-
-
-
 <html>
 <head>
     <title>Dashboard</title>

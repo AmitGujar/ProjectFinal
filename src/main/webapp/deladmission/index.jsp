@@ -57,7 +57,6 @@
                                         <input type="email" name="email" class="form-control"
                                                placeholder="Enter student email" required><br>
                                         <button type="submit" class="btn btn-danger">Delete</button>
-
                                     </form>
                                 </div>
                             </div>
