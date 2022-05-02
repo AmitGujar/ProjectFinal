@@ -79,9 +79,8 @@
                     <a href="" class="btn bg-dark text-white">Exams</a>
                     <hr>
                     <p>Create exams</p>
-                    <a href="" class="btn bg-info text-white">Manual
+                    <a href="../questions/index.jsp" class="btn bg-info text-white">Manual
                         exam</a>
-                    <a href="" class="btn btn-success">Random exam</a>
                 </div>
             </div>
         </div>

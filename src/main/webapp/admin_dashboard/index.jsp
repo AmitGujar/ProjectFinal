@@ -43,7 +43,7 @@ ResultSet resultSet = null;
             <a class="active" href="#">Dashboard</a>
             <a href="../registration/index.jsp">New admissions</a>
             <a href="../deladmission/index.jsp">Manage admissions</a>
-            <a href="/enquiry">Manage enquiries</a>
+            <a href="delenquiry.jsp">Manage enquiries</a>
         </div>
     </div>
     <div class="col-lg-10 container-fluid"><br>
