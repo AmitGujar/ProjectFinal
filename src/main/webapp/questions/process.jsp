@@ -26,6 +26,7 @@
         ps.setString(6,op4);
         ps.setString(7,option);
         ps.executeUpdate();
+        response.sendRedirect("index.jsp");
     }
     catch(Exception e)
     {

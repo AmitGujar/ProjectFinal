@@ -22,7 +22,8 @@
                     <h3>Create a new manual exam</h3>
                 </div>
                 <div class="exam-create-box">
-                    <form method="post" action="process.jsp">
+                    <iframe name="votar" style="display:none;"></iframe>
+                    <form method="post" action="process.jsp" target="votar">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
@@ -78,24 +79,18 @@
                         <input type="radio" value="value3" name="option">
                         <input type="radio" value="value4" name="option">
                         <hr>
-                        <button class="btn btn-warning">Add question</button>
-
+                        <button class="btn btn-warning" onClick="showAlert()">Add question</button>
                     </form>
                 </div>
-
-
-
-
-
-
             </div>
         </div>
     </div>
     <br>
-
-
-
-
+    <script>
+        function showAlert() {
+            alert("Question Added Successfully!");
+        }
+    </script>
     <%@ include file="/partials/footer.html" %>
 </body>
 </html>
