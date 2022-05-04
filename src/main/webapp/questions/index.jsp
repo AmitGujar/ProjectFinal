@@ -80,6 +80,10 @@
                         <input type="radio" value="value4" name="option">
                         <hr>
                         <button class="btn btn-warning" onClick="showAlert()">Add question</button>
+                        <a href="../teacher_dashboard/index.jsp">
+                            <button class="btn btn-primary">Create Exam</button>
+                        </a>
+
                     </form>
                 </div>
             </div>
