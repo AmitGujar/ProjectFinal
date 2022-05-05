@@ -18,7 +18,7 @@
     {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/school","root","1234");
-        PreparedStatement ps=con.prepareStatement("insert into enquiry(eno, full_name, phone, cname, enquiry_doubt) values(NULL,?,?,?,?)");
+        PreparedStatement ps=con.prepareStatement("insert into enquiry(eno, full_name, phone, cname, enquiry) values(NULL,?,?,?,?)");
 
         ps.setString(1,fullname);
         ps.setString(2,phone);
